@@ -29,7 +29,7 @@ pipeline {
         stage('Cleanup') {
             steps {
                 echo 'Cleaning..'
-                sh 'docker images -q | xargs --no-run-if-empty docker rmi'
+                sh 'docker images -q | xargs --no-run-if-empty docker rmi -f'
             }
         }
     }
