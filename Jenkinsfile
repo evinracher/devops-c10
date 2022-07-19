@@ -29,7 +29,6 @@ pipeline {
         stage('Cleanup') {
             steps {
                 echo 'Cleaning..'
-                sh 'docker images --filter "dangling=true" -q --no-trunc | docker rmi'
                 sh 'docker images -q | xargs --no-run-if-empty docker rmi'
             }
         }
