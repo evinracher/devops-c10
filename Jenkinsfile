@@ -22,7 +22,7 @@ pipeline {
         stage('Stage 2') {
             steps {
                 echo 'Publishing..'
-                echo 'Publishing image to DockerHub..'
+                echo 'Publishing image to Docker Hub..'
                 sh 'docker push $dockerhub_USR/static_page:latest'
             }
         }
